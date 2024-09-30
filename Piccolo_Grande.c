@@ -13,6 +13,7 @@
     scanf("%d", &b);
     printf("inserisci il terzo valore: ");
     scanf("%d", %c);
+    
 
     
     
