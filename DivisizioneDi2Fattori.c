@@ -8,7 +8,7 @@ int main (){
     printf("inserisci un numero a piacere");
     scanf("%d", &numero);
 
-    if(numero ){
+    if(numero /5 and /3){
         printf(il numero%d è divisibile sia per tre sia per cinque);
     }
     else{
