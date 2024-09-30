@@ -9,7 +9,7 @@ int main (){
     scanf("%d", &numero);
 
     if(numero /5 and /3){
-        printf(il numero%d è divisibile sia per tre sia per cinque);
+        printf("il numero %d è divisibile sia per tre sia per cinque");
     }
     else{
         if(numero /5)
