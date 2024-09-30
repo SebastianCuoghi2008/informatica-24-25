@@ -21,5 +21,5 @@ int main(){
     else{
         prinf("il primo valore %f non corrisponde al quadrato del secondo %f", A,B);
     }
-
+return 0
 }
