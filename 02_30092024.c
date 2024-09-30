@@ -16,9 +16,9 @@ int main(){
     }
     else{
         if(A>B)
-            printf("A %d è maggiore di B %d", A,B);
+            printf("A%d è maggiore di B%d", A,B);
         else
-            printf("A %d è minore di B %d", A,B);   
+            printf("A%d è minore di B%d", A,B);   
     }
     return 0;
 }
