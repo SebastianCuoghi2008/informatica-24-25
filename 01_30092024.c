@@ -19,7 +19,7 @@ int main(){
         printf("il primo valore %f corrisponde al quadrato del secondo %f", A,B);
     }
     else{
-        prinf("il primo valore %f non corrisponde al quadrato del secondo %f", A,B);
+        printf("il primo valore %f non corrisponde al quadrato del secondo %f", A,B);
     }
-return 0
+return 0;
 }
