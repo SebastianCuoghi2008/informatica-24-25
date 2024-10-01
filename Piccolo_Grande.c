@@ -3,16 +3,15 @@
 
  #include <stdio.h>
  int main(){
-    int a=0;
-    int b=0;
-    int c=0;
+    float a=0;
+    float b=0;
+    float c=0;
+    float media=0;
+    float max=0;
+    float min=0;
 
-    printf("inserisci il primo valore: ");
-    scanf("%d", &a);
-    printf("inserisci il secondo valore: ");
-    scanf("%d", &b);
-    printf("inserisci il terzo valore: ");
-    scanf("%d", %c);
+    printf("inserisci  tre valori: ");
+    scanf("%f%f%f", &a, &b, &c);
     
 
     
