@@ -19,7 +19,8 @@ int main(){
     printf("inserisci il quarto lato altezza: ");
     scnaf("%f", &lato4);
     perimetro=lato1+lato2+lato3+lato4;
+    
 
-    if(lato1)
+    
     
 }
