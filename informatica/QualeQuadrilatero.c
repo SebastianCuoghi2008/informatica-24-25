@@ -2,24 +2,28 @@
 individua se si tratta di un quadrato o di un rettangolo e ne calcola il perimetro e l’area.*/
 
 #include <stdio.h>
-int main(){
-    float lato1=0;
-    float lato2=0;
-    float lato3=0;
-    float lato4=0;
-    float perimetro=0;
-    float area=0;
+#include <stdlib.h>
 
-    printf("inserisci il primo lato: ");
-    scnaf("%f", &lato1);
-    printf("inserisci il seconda lato: ");
-    scnaf("%f", &lato2);
-    printf("inserisci il terzo lato: ");
-    scnaf("%f", &lato3);
-    printf("inserisci il quarto lato altezza: ");
-    scnaf("%f", &lato4);
-    perimetro=lato1+lato2+lato3+lato4;
-    
+int main(){
+    int l1;
+    int l2;
+    int area;
+    int perimitro;
+    printf("inserisci il valore l1:");
+    scanf("%d", &l1);
+    printf("inserisci il valore l2:");
+    scanf("%d", &l2);
+
+    if (l1 == l2){
+        printf("è un quadrato");
+    }
+    else{
+        printf("è un rettangolo");
+    }
+    area = l1 * l2;
+    perimitro = l1+l2+l1+l2; 
+    printf("l'area è %d , \n il  perimetro è %d :", area , perimitro);
+}
 
     
     
