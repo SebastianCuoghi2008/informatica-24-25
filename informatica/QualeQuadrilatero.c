@@ -24,6 +24,8 @@ int main(){
     area = l1 * l2;
     perimetro = l1+l2+l1+l2; 
     printf("l'area è %d, \n il  perimetro è %d :", area, perimitro);
+
+    return 0;
 }
 
     
