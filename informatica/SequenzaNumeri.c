@@ -20,13 +20,11 @@ int main(){
     printf("inserisci il quarto numero: ");
     scanf("%d", &Nd);
     printf("inserisci il quinto numero: ");
-    scanf("%d", &Ne); 
+    scanf("%d", &Ne);
 
-    if ("n2==n1+1 && n3==n2+1 && n4==n3+1 && n5==n4+1"){
-        printf("la sequenza %d %d %d %d %d è adeguata");
-    }
-    else{
-        printf("la sequenza %d %d %d %d %d non è adeguata"); 
-    }
-    return 0;
+    if("Nb==Na+1 && Nc==Nb+1 && Nd==Nc+1 && Ne==Nd+1")
+        printf("la sequenza è ordinata.");
+    else
+        printf("la sequenza non è ordinata.");
+
 }
