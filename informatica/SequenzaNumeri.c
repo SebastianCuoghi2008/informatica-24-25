@@ -22,7 +22,7 @@ int main(){
     printf("inserisci il quinto numero: ");
     scanf("%d", &Ne); 
 
-    if (""){
+    if ("n2==n1+1 && n3==n2+1 && n4==n3+1 && n5==n4+1"){
         printf("la sequenza %d %d %d %d %d è adeguata");
     }
     else{
