@@ -22,7 +22,7 @@ int main(){
     printf("inserisci il quinto numero: ");
     scanf("%d", &Ne);
 
-    if("Nb==Na+1 && Nc==Nb+1 && Nd==Nc+1 && Ne==Nd+1")
+    if(Nb==Na+1 && Nc==Nb+1 && Nd==Nc+1 && Ne==Nd+1)
         printf("la sequenza è ordinata.");
     else
         printf("la sequenza non è ordinata.");
