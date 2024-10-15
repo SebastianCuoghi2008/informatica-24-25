@@ -115,6 +115,8 @@ int main(){
     else{
         printf("\nLa seconda data non è accettabile");
     }
+
+    //controllo data più recente
     if(annoA>annoB){
         printf("la prima data è recente");
     }
