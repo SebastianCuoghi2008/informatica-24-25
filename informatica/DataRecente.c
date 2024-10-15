@@ -12,14 +12,19 @@ int main(){
     int annoB=0;
     int bisestile=0;
 
+    //richiesta prima data
     printf("\ninserisci la prima data");
     scanf("%d", &giornoA);
     scanf("%d", &meseA);
     scanf("%d", &annoA);
+    printf("%d/%d/%d", &giornoA, &meseA, &annoA);
+
+    //richiesta seconda data
     printf("\ninserisci la seconda data");
     scanf("%d", &giornoB);
     scanf("%d", &meseB);
     scanf("%d", &annoB);
+    printf("%d/%d/%d", &giornoB, &meseB, &annoB);
 
     //controllo prima data
     if(annoA%100==0){
