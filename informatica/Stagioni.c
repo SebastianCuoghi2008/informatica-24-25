@@ -1,12 +1,13 @@
 /*Data una data in formato giorno e mese, dire a che stagione appartiene la data.
 Ricordando che primavera va dal 21 marzo al 22 giugno, l'estate va dal 23 giugno
 al 22 settembre, l'autunno va dal 23 settembre al 21 dicembre e l'inverno va dal
-22 dicembre al 20 marzo. */
+22 dicembre al 20 marzo.*/
 
 #include <stdio.h>
 
 int main(){
-    int mese,giorno;
+    int mese=0;
+    int giorno=0;
 
     printf("inserisci giorno: ");
     scanf("%d", &giorno);
@@ -22,7 +23,8 @@ int main(){
     printf("estate");
     else if(mese==10||mese==11)
     printf("autunno");
-    
-
-
+    else{
+        printf("la data inserita non appartiene a nessuna stagione");
+    }
+    return 0;
 }
