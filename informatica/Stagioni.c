@@ -24,7 +24,6 @@ int main(){
     else if(mese==10||mese==11)
     printf("autunno");
     else{
-        printf("la data inserita non appartiene a nessuna stagione");
-    }
+       
     return 0;
 }
