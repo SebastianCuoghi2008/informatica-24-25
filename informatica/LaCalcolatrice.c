@@ -1,5 +1,9 @@
+/*Scrivi un programma in C che simuli una calcolatrice semplice, il programma deve permettere all'utente di scegliere un'operazione tra somma,
+sottrazione, moltiplicazione e divisione. Il programma deve quindi chiedere due numeri e restituire il risultato dell'operazione scelta.
+Usare il costrutto switch case.*/
+
 #include <stdio.h>
- 
+
 int main(){
     int numero1=0;
     int numero2=0;
