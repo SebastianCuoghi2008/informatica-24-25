@@ -1,33 +1,36 @@
-#include <stdio.h> 
+#include <stdio.h>
+ 
 int main(){
     int numero1=0;
-    int numumo2=0;
+    int numero2=0;
     char operazione;
+    float risultato;
+    int flag=0;
 
-    printf("quale operazione vuoi fare? ");
-    scanf("%c", &operazione);
+    printf(" inserisci il primo numero: ");
+    scanf("%d", &numero1);
+    printf("inserisci il secondo numero: ");
+    scanf("%d", &numero2);
+    printf("quale operazione vuoi fare:");
+    scanf(" %c", &operazione);
     switch(operazione){
-        case 'A':
-            A=numero1+numero2;
-            printf("il risultato é: ");
-            berak;          
-        case 'S':
-            S=numero1-numero2;
-            printf("il risultato é: ");
-            berak;          
-        case 'M':
-            M=numero1*numero2;
-            printf("il risultato é: ");
-            berak;          
-        case 'D':
-            D=numero1/numero2;
-            printf("il risultato é: ");
-            berak;
-        default:
-            printf(il numero inserito non è valido);
+        case 'a':
+                    risultato=numero1+numero2;
+                    break;
+        case 'm': 
+                    risultato=numero1*numero2;
+                    break;
+        case 's':
+                    risultato=numero1-numero2;
+                    break;
+        case 'd':
+                    risultato=(float)numero1/(float)numero2;
+                    break;
+        default: 
+                    flag=1;
+                    printf("l'operazione scelta non è disponibile");
     }
+    if(flag==0)
+                    printf("il risultato della operazione è: %f", risultato);
     return 0;
-}      
-
-
-        
+}
