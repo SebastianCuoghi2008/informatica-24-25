@@ -6,28 +6,84 @@ in massimo 5 tentativi. Usa la variabile flag per capire quando viene indovinata
 #include <time.h>
 
 int main(){
+
     srand(time(NULL));
-    int randomMax=20;
-    int randomMin=1;
+    int n1=0;
+    int numeroIndovinato=0;
     int flag=0;
+    int contatore=0;
 
-    int random = rand()%(randomMax - randomMin + 1)+randomMin;
+    n1=rand()%20+1;
+    printf("tenta di indovinare il numero: ");
+    scanf("%d", &numeroIndovinato);
+    contatore=contatore + 1;
 
-    if(flag==0){
-        printf("\n primo tentativo random: %d", random);
-    } 
-    if(flag==0){
-        printf("\n secondo tentativo random: %d", random);
-    }    
-    if(flag==0){
-        printf("\n terzo tentativo random: %d", random);
-    }    
-    if(flag==0){
-        printf("\n quarto tentativo random: %d", random);
-    }    
-    if(flag==0){
-        printf("\n quinto tentativo random: %d", random);
+    if(numeroIndovinato == n1){
+        printf("hai indovinato il numero!");
+        flag=1;
     }
-    return 0;     
-}    
-    
+    else{
+        printf("non hai indovinato il numero!");
+    }
+
+    if(flag == 0){
+        printf(" ritenta di indovinare il numero: ");
+        scanf("%d", &numeroIndovinato);
+        contatore+=1; //contatore=contatore + 1
+
+        if(numeroIndovinato == n1){
+            printf("hai indovinato il numero!");
+            flag=1;
+        }
+        else{
+            printf("non hai indovinato il numero!");
+        }
+    }
+    if(flag == 0){
+        printf(" ritenta di indovinare il numero: ");
+        scanf("%d", &numeroIndovinato);
+        contatore++;
+
+        if(numeroIndovinato == n1){
+            printf("hai indovinato il numero!");
+            flag=1;
+        }
+        else{
+            printf("non hai indovinato il numero!");
+        }
+    }
+    if(flag == 0){
+        printf(" ritenta di indovinare il numero: ");
+        scanf("%d", &numeroIndovinato);
+        contatore++;
+
+        if(numeroIndovinato == n1){
+            printf("hai indovinato il numero!");
+            flag=1;
+        }
+        else{
+            printf("non hai indovinato il numero!");
+        }
+
+    }
+    if(flag == 0){
+        printf(" ritenta di indovinare il numero: ");
+        scanf("%d", &numeroIndovinato);
+        contatore++;
+
+        if(numeroIndovinato == n1){
+            printf("hai indovinato il numero!");
+            flag=1;
+        }
+        else{
+            printf("non hai indovinato il numero!");
+        }
+    }
+    if(flag==1){
+        printf("hai indovinato con: %d tentativi", contatore);
+    }
+    else{
+        printf("non ce l'hai fatta neanche in 5 tentativi!");
+    }
+    return 0;
+}
