@@ -39,7 +39,7 @@ int main(){
             printf("lo sconto vale %f", prezzoProdotto);
             break;
         default:
-            printf("non inserisca lettere o caratteri che non c'entrano");
+            printf("non inserire lettere o caratteri che non c'entrano");
             break;
     }
     return 0;
