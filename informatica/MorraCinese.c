@@ -9,51 +9,31 @@ int main(){
     srand(time(NULL));
     int utente;
     int computer;
-    
+    computer=rand()%3+1;
 
-    printf("scegli tra sasso (1), carta(2) e forbice(3) in morra cinese"); 
-    printf("inserisci la tua scelta");
+    printf("scegli tra sasso (1), carta(2) e forbice(3) in morra cinese: "); 
+    printf("inserisci la tua scelta: ");
     scanf("%d", &utente);
     
-    switch (utente){
-        case 1:
-            printf("\n sasso");
-            break;
-        case 2:
-            printf("\n carta");
-            break;
-        case 3:
-            printf("\n forbice");
-            break;
-        default:
-            printf("non inserire cavolate");
-            break;
+    if(utente==1 || utente==2 || utente==3){
+        if(computer==utente){
+            printf("pareggio");
+        }
+        else if(utente==1 && computer==3){
+            printf("hai vinto, congratulazioni");
+        }
+        else if(utente==2 && computer==1){
+            printf("hai vinto, congratulazioni");
+        }
+        else if(utente==3 && computer==2){
+            printf("hai vinto, congratulazioni");
+        }
+        else{
+            printf("ha vinto il computer con la fortuna, midispiace");
+        }
     }
-
-    scanf("%d &computer");
-
-    switch (computer){
-        case 1:
-            printf("\n sasso");
-            break;
-        case 2:
-            printf("\n carta");
-            break;
-        case 3:
-            printf("\n forbice");
-            break;
-        default:
-            printf("non inserire cavolate");
-            break;
+    else{
+        printf("la scelta non è valida, midispiace");
     }
     return 0;
-}
-        
-    
-
-
-
-
-
-
 }
