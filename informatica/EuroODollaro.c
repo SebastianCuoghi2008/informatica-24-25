@@ -10,29 +10,38 @@ una somma di denaro calcolare il controvalore.*/
 
 int main(){
     float sommaDenaro=0;
-    float Dollaro=1.23;
-    float Euro=0,82;
-    int scelta;
+    float sommaConvertita=0;
+    int scelta=0;
+    const float tasso=1.23;
 
-    printf("inserisci una somma di denaro: ");
-    scanf("%f", &sommaDenaro);
     printf("scegli tra Dollaro (1) o Euro (2), per come vuoi trasformare la somma di denaro inserita: ");
     scanf("%d", &scelta);
+    printf("inserisci il valore che vuoi convertire: ");
+    scanf("%f", &sommaDenaro);
 
     switch (scelta){
         case 1:
-            printf("Euro a Dollaro");
-            sommaDenaro=sommaDenaro*Dollaro;
-            printf("lo scampio in Dollaro vale %f, sommaDenaro");
+            sommaConvertita = sommaDenaro / tasso;
+            printf("%f $ = %f €", sommaDenaro, sommaConvertita);
             break;
         case 2:
-            printf("Dollaro a Euro");
-            sommaDenaro=sommaDenaro*Euro;
-            printf("lo scampio in Euro vale %f, sommaDenaro");
+            sommaConvertita = sommaDenaro / tasso;
+            printf("%f € = %f $", sommaDenaro, sommaConvertita);
             break;
         default:
             printf("non inserire lettere o caratteri che non c'entrano");
             break;       
+    }
+    if(scelta==1){
+        sommaConvertita = sommaDenaro / tasso;
+        printf("%f $ = %f €", sommaDenaro, sommaConvertita);
+    }
+    else if(scelta==2){
+        sommaConvertita = sommaDenaro / tasso;
+        printf("%f € = %f $", sommaDenaro, sommaConvertita);
+    }
+    else{
+        printf("hai scelto un'operazione non valida");
     }
     return 0;
 }
