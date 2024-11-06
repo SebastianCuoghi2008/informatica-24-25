@@ -11,38 +11,32 @@ visualizzare il prezzo scontato.*/
 #include <stdio.h>
 
 int main(){
-    float prezzoProdotto=0;
-    int scelta;
+    int reparto;
+    float prezzo;
+    float sconto;
 
-    printf("inserisci un prezzo di un prodotto: ");
-    scanf("%f", &prezzoProdotto);
-    printf("scegli un reparto tra 1,2,3,4, in cui fare lo sconto: ");
-    scanf("%d", &scelta);
-
-    switch (scelta){
-        case 1: 
-            printf("nessuno sconto");
+    printf("scegli un reparto: ");
+    scanf("%d", &reparto);
+    printf("inserisci il prezzo del prodotto: ");
+    scanf("%f", &prezzo);
+    
+    switch(reparto){
+        case 1:
+            sconto=0;
             break;
         case 2:
-            printf("lo sconto è 3");
-            prezzoProdotto=prezzoProdotto/100*3;
-            printf("lo sconto vale %f", prezzoProdotto);
+            sconto=(prezzo/100)*3;
             break;
         case 3:
-            printf("lo sconto è 2");
-            prezzoProdotto=prezzoProdotto/100*2;
-            printf("lo sconto vale %f", prezzoProdotto);
+            sconto=(prezzo/100)*2;
             break;
         case 4:
-            printf("lo sconto è 5");
-            prezzoProdotto=prezzoProdotto/100*5;
-            printf("lo sconto vale %f", prezzoProdotto);
+            sconto=(prezzo/100)*5;
             break;
         default:
-            printf("non inserire lettere o caratteri che non c'entrano");
-            break;
+            printf("il reparto è inesistente");
+            sconto=0;
     }
+    printf("il prezzo finale è %f", prezzo-sconto);
     return 0;
 }
-
-    
