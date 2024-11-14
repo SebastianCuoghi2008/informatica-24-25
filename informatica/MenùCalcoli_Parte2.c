@@ -49,7 +49,7 @@ int main(){
             scanf("%d", &K);
 
             if(K-numero1 > K-numero2){
-                printt("il secondo numero è il più vicino");
+                printf("il secondo numero è il più vicino");
             }
             else if(K-numero1 == numero2){
                 printf("tutti i due numeri sono vicini alla cifra K");              
@@ -63,7 +63,7 @@ int main(){
                 printf("\n %d è il multiplo di %d", numero1, numero2);
             }
             else if(numero2/numero1 == 0){
-                pritf("\n %d è il mutiplo di %d");
+                printf("\n %d è il mutiplo di %d");
             }
             else{
                 printf("\n nessun numero è multiplo tra di loro");
