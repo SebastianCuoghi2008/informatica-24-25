@@ -5,18 +5,23 @@ Vedi pag 160*/
 #include <stdio.h>
 
 int main(){
-    int numero=0;
+    Long numero=0;
     int conta=2;
-    int fibonaccioA=1;
-    int fibonaccioB=1;
-    int fibonaccioC=0;
+    long fibonaccioA=1;
+    long fibonaccioB=1;
+    long fibonaccioC=0;
 
     printf("inserisci il numero di termini: ") ;
-    scanf("%d", &numero);
+    scanf("%ld", &numero);
 
-    while(conta < numero){
+    while (num<3)
+    {
+        printf("Inserisci un valore maggiore di 3: ");
+        scanf("%ld", &numero);
+    }
+    while(numero!=conta){
         fibonaccioC=fibonaccioA+fibonaccioB;
-        printf("%d", fibonaccioC);
+        printf("%ld", fibonaccioC);
         conta++;
         fibonaccioA=fibonaccioB;
         fibonaccioB=fibonaccioC;
