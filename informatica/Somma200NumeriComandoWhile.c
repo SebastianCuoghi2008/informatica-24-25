@@ -14,7 +14,7 @@ int main(){
         conta = conta + 1; //conta++;   conta+=1;
         somma = somma + num;
     }
-
     media = somma / conta;
     printf("\nla media è %.2f, il numero di tentativi è %d", media, conta);
+    return 0;
 }
