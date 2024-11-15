@@ -8,13 +8,13 @@ int main(){
     int contatore=0;
 
     do{
-        printf("inserisci un numero");
-        scanf("%d", &num);
-        cnt++;
-        if(num>max || cnt==1)
-            max=num;
+        printf("inserisci un numero: ");
+        scanf("%d", &numero);
+        contatore++;
+        if(numero>max || contatore==1)
+            max=numero;
     }
-    while(cnt<=10);
+    while(contatore<=10);
     
     printf("il valore massimo inserito é %d ",max);
     return 0;
