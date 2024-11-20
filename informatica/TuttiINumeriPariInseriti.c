@@ -4,18 +4,16 @@ e visualizza tutti i numeri pari inferiori a tale numero fino a 0.*/
 #include <stdio.h>
 
 int main(){
-    int numero=0;
-    int contatore=1;
-
-    printf("inserisci un numero: ");
-    scanf("%d", &numero);
-
-    while(numero>0){
-        printf("\n il valore inserito è: %d\n", numero);
+    int numero;
+    do{
         printf("inserisci un numero: ");
         scanf("%d", &numero);
-        contatore++;
+    }while(numero<0);
+    if(numero%2==1)
+        numero--;
+    while(numero>0){
+        printf("%d\n", numero);
+        numero=numero-2;
     }
-    printf("hai inserito %d numeri", contatore);
     return 0;
 }
