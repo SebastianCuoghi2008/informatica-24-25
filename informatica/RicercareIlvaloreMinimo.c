@@ -1,22 +1,22 @@
 /*Scrivi un programma che legge una sequenza di numeri interi terminanti con uno 0
 (cioè il programma termina quando viene inserito 0) e ne ricerca il valore minimo visualizzandolo sullo schermo.*/
 
+#include <limits.h>
 #include <stdio.h>
 
 int main(){
-    int numero=0;
-    int min=0; 
-    int contatore=0;
+    int numero;
+    int min = INT_MAX;
 
     do{
-        printf("inserisci un numero: ");
+        printf("Inserisci un numero");
         scanf("%d", &numero);
-        contatore++;
-        if(numero<min || contatore==1)
+        if(numero<min){
             min=numero;
+        }
     }
-    while(contatore<=10);
-    
-    printf("il valore minimo inserito é %d ",min);
+    while(numero!=0);
+    printf("il numero più piccolo è %d", min);
+
     return 0;
 }
