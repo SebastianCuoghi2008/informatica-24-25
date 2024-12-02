@@ -6,8 +6,11 @@ int main(){
     int numero=0;
     int prodotto;
 
-    printf("inserisci un numero: ");
-    scanf("%d", &numero);
+    do
+    {
+        printf("Inserisci un valore: ");
+        scanf("%d", &num);
+    } while (num<0);
     prodotto=numero;
 
     for(int i=1; i<=11; i++){ 
