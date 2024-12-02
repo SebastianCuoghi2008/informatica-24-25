@@ -9,8 +9,8 @@ int main(){
     do
     {
         printf("Inserisci un valore: ");
-        scanf("%d", &num);
-    } while (num<0);
+        scanf("%d", &numero);
+    } while (numero<0);
     prodotto=numero;
 
     for(int i=1; i<=11; i++){ 
