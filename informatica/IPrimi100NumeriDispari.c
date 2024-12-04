@@ -3,13 +3,14 @@
 #include <stdio.h>
 
 int main(){
-    int d=1;
+    int dispari=1;
 
     for(int i=0; i<20; i++){
         for(int j=0; j<5; j++){
-            printf("%d\t",d);
-            d+=2;
+            printf("%d\t",dispari);
+            dispari+=2;
         }
         printf("\n");
     }
+    return 0;
 }
