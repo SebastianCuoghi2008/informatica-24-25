@@ -4,11 +4,10 @@
 int main(){
     int numero;
 
-    do
-    {
+    do{
         printf("Inserisci un valore: ");
         scanf("%d", &numero);
-    } while (numero<0);
+    }while (numero<0);
 
     for(int i=numero; i>=0; i=i-2){
         printf("%d\n", i);
