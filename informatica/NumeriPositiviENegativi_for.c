@@ -10,20 +10,20 @@ int main(){
     
      do{
         printf("inserisci un numero: ");
-        scanf("%d", &n);
-    }while(n<=0);
+        scanf("%d", &numero);
+    }while(numero<=0);
 
-    for(int i=0; i<n; i++){
+    for(int i=0; i<numero; i++){
         printf("inserisci un valore: ");
         scanf("%d", &valore);
         if(valore<0){
-            sommaN=sommaN+valore
+            sommaN=sommaN+valore;
         }
         else{
-            sommaP=sommaP+valore
+            sommaP=sommaP+valore;
         }
     }
     printf("la somma dei numeri negativi è %d e invce di quelli positivi è %d", sommaN, sommaP);
     return 0;
-
+}
     
