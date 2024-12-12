@@ -25,5 +25,4 @@ int main(){
     }
     printf("la somma dei numeri negativi è %d e invce di quelli positivi è %d", sommaN, sommaP);
     return 0;
-}☺☻♥♦♣♠•◘○
-    
+}  
