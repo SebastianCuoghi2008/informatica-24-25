@@ -1,11 +1,10 @@
 /*dati in input 10 numeri interi, determinare il valore maggiore e quente volte compare.*/
 
 #include <stdio.h>
-#include <limits.h>
 
 int main(){
     int numero=0;
-    int max=INT_MIN; 
+    int max=0; 
     int contatore=1;
 
     for(int i=0; i<10; i++){
