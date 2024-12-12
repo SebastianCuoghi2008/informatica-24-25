@@ -11,7 +11,7 @@ int main(){
      do{
         printf("inserisci un numero: ");
         scanf("%d", &numero);
-    }while(numero<=0);
+    }while(numero<=5);
 
     for(int i=0; i<numero; i++){
         printf("inserisci un valore: ");
@@ -25,5 +25,5 @@ int main(){
     }
     printf("la somma dei numeri negativi è %d e invce di quelli positivi è %d", sommaN, sommaP);
     return 0;
-}
+}☺☻♥♦♣♠•◘○
     
