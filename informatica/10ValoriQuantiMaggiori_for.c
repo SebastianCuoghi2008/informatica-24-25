@@ -5,7 +5,7 @@
 int main(){
     int numero=0;
     int max=0; 
-    int contatore=1;
+    int contatore=0;
 
     for(int i=0; i<10; i++){
         printf("inserisci un numero: ");
