@@ -4,20 +4,20 @@
 #include <stdio.h>
 
 int main(){
-    int N1=0;
-    int N2=0;
-    int N3=0;
+    int numero1=0;
+    int numero2=0;
+    int numero3=0;
     int somma=0;
 
-    printf("inserisci il primo numero lato:");
-    scanf("%d", &N1);
-    printf("inserisci il secondo numero lato:");
-    scanf("%d", &N2);
-    printf("inserisci il terzo numero lato:");
-    scanf("%d", &N3);
+    printf("inserisci il primo numero lato: ");
+    scanf("%d", &numero1);
+    printf("inserisci il secondo numero lato: ");
+    scanf("%d", &numero2);
+    printf("inserisci il terzo numero lato: ");
+    scanf("%d", &numero3);
 
-    if(N1>N2 && N2>N3){
-        somma=N1+N2+N3;
+    if(numero1>numero2 && numero2>numero3){
+        somma=numero1+numero2+numero3;
         printf("le lunghezze dei lati numeri sono di un triangolo");
     }
     else{
