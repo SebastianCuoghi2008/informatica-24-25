@@ -15,7 +15,7 @@ int main(){
         printf("i due valori sono uguali");
     }
     else{
-        if(A>B)
+        if(A > B)
             printf("A%d è maggiore di B%d", A,B);
         else
             printf("A%d è minore di B%d", A,B);   
