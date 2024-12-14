@@ -4,19 +4,19 @@ una progressione aritmetica è una serie di numeri in cui la differenza tra due 
 #include <stdio.h>
 
 int main(){
-    int N1=0;
-    int N2=0;
-    int N3=0;
+    int numero1=0;
+    int numero2=0;
+    int numero3=0;
 
     printf("inserisci il primo valore:");
-    scanf("%d", &N1);
+    scanf("%d", &numero1);
     printf("inserisci il secondo valore:");
-    scanf("%d", &N2);
+    scanf("%d", &numero2);
     printf("inserisci il terzo valore:");
-    scanf("%d", &N3);
+    scanf("%d", &numero3);
 
-    if(N1==N2){
-        if(N2==N3){
+    if(numero1==numero2){
+        if(numero2==numero3){
             printf("i primi due valori sono costanti");
         }
         else{
