@@ -1,6 +1,8 @@
 /*dato un numero più cifre stampare
 le cifre che compongono il numero*/
 
+#include <stdio.h>
+
 int main(){
     int numero=0;
     int quoziente=0;
