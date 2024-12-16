@@ -10,7 +10,7 @@ int main(){
     do{
         printf("inserisci un numero maggioredi 0:\n "); 
         scanf("%d", &numero);
-    }while(numero<=0);
+    }while(numero<0);
 
     for(int i=1; i<=numero; i++){
         somma=somma+i;
