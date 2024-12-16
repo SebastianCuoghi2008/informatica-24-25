@@ -14,7 +14,8 @@ int main(){
 
     for(int i=1; i<=numero; i++){
         somma=somma+i;
+        printf("%d+", i);
     }
-    printf("la somma dei numeri primi è %d", somma);
+    printf("\nla somma dei numeri primi è %d", somma);
     return 0;
 }
