@@ -5,7 +5,7 @@ Vedi pag 160*/
 #include <stdio.h>
 
 int main(){
-    Long numero=0;
+    long numero=0;
     int conta=2;
     long fibonaccioA=1;
     long fibonaccioB=1;
@@ -14,7 +14,7 @@ int main(){
     printf("inserisci il numero di termini: ") ;
     scanf("%ld", &numero);
 
-    while (num<3)
+    while (numero<3)
     {
         printf("Inserisci un valore maggiore di 3: ");
         scanf("%ld", &numero);
