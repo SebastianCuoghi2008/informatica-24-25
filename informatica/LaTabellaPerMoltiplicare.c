@@ -2,13 +2,13 @@
 
 #include <stdio.h>
 int main(){
-    int num;
+    int numero=0;
     
-    printf("inserisci un numero:");
-    scanf("%d", &num);
+    printf("inserisci un numero: ");
+    scanf("%d", &numero);
 
-    for(int i=1; i<=10; i++ ){
-        printf("%d\t", num*i);
+    for(int i=1; i<=10; i++){
+        printf("%d\t", numero*i);
     }
     return 0;
 }
