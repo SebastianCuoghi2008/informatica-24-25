@@ -10,7 +10,6 @@ Si consideri ad esempio il caso N=5. Il rettangolo è il seguente:
 Il programma riceve da tastiera un numero intero N e visualizza le prime N righe del rettangolo.*/
 
  #include <stdio.h>
-
  int main(){
     int numero=0;
 
