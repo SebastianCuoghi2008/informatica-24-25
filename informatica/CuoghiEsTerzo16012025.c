@@ -7,46 +7,42 @@ Esempio: scelta=crescente - l’utente inserisce: 8 35 3 8 46 - numeri inseriti:
 
 int main(){
     int numero=0;
-    int temp=0;
+    int min_max;
     int contatore=0;
     int scelta;
 
-    printf("scegli se li vuoi mettere in ordine crescente o decrescente: ");
+    printf("scegli la sequenza dei numeri tra crescente o decrescente: ");
     scanf("%d", &scelta);
 
-    switch(scelta){
-        case 1:
-            printf("hai scelto l'ordine crescente:\n");
-            do{
-                printf("inserisci un numero: ");
-                scanf("%d", &numero);
-                contatore++;
-            }while(numero>0);
-            if(numero<numero){
-                temp=numero;
-                numero=numero;
-                numero=temp;
-            }
-            printf("hai inserito %d numeri", contatore);
-            printf("i numeri in senso crescente sono %d", numero);
+    printf("inserisci il valore: ");
+    scanf("%d", &numero);
+    min_max-numero;
+
+    while(numero!=0){
+        contatore++;
+        switch (scelta){
+            case 1:
+                if(numero>=min_max){
+                    min_max=numero;
+                    printf("%d \n", min_max);
+                }
             break;
-        case 2:
-            printf("hai scelto l'ordine decrescente:\n");
-            do{
-            printf("inserisci un numero: ");
-                scanf("%d", &numero);
-                contatore++;
-            }while(numero>0);
-            if(numero>numero){
-                temp=numero;
-                numero=numero;
-                numero=temp;
-            }
-            printf("hai inserito %d numeri", contatore);
-            printf("i numeri in senso decrescente sono %d", numero);   
+            case 2:
+                if(numero<=min_max){
+                    min_max=numero;
+                    printf("%d \n", min_max);
+                }
             break;
-        default:
-        printf("non inserire valori che non c'entrano");
+            default:
+                printf("non inserire carattereri che non c'entrano");
+            break;         
+        }
+        printf("\n inserisci un nuovo valore: ");
+        scanf("%d", &numero);
     }
-    return 0;     
+    printf("\n sono stati inseriti %d valori", contatore);
+    return 0;
 }
+
+
+   
