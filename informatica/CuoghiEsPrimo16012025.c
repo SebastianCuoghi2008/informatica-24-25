@@ -6,26 +6,23 @@ corrisponde alla quarta posizione.*/
 
 int main(){
     int numero=0;
-    int quoziente=0;
-    int resto=0;
+    int cifra=0;
+    int posizione=1;
+    int numero_quoziente;
 
-    printf("inserisci un numero: ");
-    scanf("%d", &numero);
+    do{
+        printf("inserisci un valore: ");
+        scanf("%d", &numero);
+    }while(numero<=0);
 
-    quoziente=numero / 10;
-    resto=numero % 10;
-    printf("la prima cifra è %d\n", resto);
-    
-    resto=quoziente % 10;
-    quoziente=quoziente / 10;
-    printf("la seconda cifra è %d\n", resto);
-
-    resto=quoziente % 10;
-    quoziente=quoziente / 10;
-    printf("la terza cifra è %d\n", resto);
-
-    resto=quoziente % 10;
-    quoziente=quoziente / 10;
-    printf("la quarta cifra è %d\n", resto);
+    numero_quoziente-numero;
+    while(numero_quoziente!=0){
+        cifra=numero_quoziente%10;
+        numero_quoziente=numero_quoziente/10;
+        if(cifra==posizione){
+            printf("\n la cifra %d corrisponde alla sua posizione %d", cifra, posizione);
+        }
+        posizione++;
+    }
     return 0;
 }
