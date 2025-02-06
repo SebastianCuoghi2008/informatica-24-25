@@ -24,7 +24,7 @@ long converti(int _N){
     while(quoziente!=0){
         resto=quoziente%2;
         quoziente=quoziente/2;
-        _convertito=pow(10, contatore);
+        _convertito+=resto*pow(10, contatore);
         contatore++;
     }
     return _convertito;
