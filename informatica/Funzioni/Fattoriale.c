@@ -7,14 +7,14 @@ long fattoriale(int _N);
 
 int main(){
    int numero=0;
-   long fattoriale;
+   long Fattoriale;
 
    do{
         printf("inserisci un numero: ");
         scanf("%d", &numero);
    }while(numero<=0);
-   fattoriale=fattoriale(numero);
-   printf("il fattoriale  é %ld", &fattoriale);
+   Fattoriale=fattoriale(numero);
+   printf("il fattoriale di %d é %ld", numero, Fattoriale);
 
 }
 long fattoriale(int _N){
