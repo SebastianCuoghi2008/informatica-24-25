@@ -20,7 +20,7 @@ int main(){
         scanf("%d", &numeroE);
     }while (numeroE<0);
 
-        potenza=calcola_potenza_B_E(int _B, int _E);
+        potenza=calcola_potenza_B_E(int numeroB, int numeroE);
 
     printf("la potenza di B per E è uguale a %d", potenza); 
 }
