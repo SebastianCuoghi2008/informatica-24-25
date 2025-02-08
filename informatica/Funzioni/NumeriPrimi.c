@@ -3,7 +3,7 @@ se n è un numero primo. La funzione restituirà 1 se il numero è primo altrime
 
 #include <stdio.h>
 
-numero_primo(int *_N)
+numero_primo(int *_N);
 
 int main(){
     int numero=0;
@@ -14,8 +14,25 @@ int main(){
         scanf("%d", &numero);
     }while (numero<=0);
 
-    numeroPrimo=numero_primo(int *_N);
+    numeroPrimo=numero_primo(int numero);
 
-    printf
+    printf("%d è un numero primo", numeroPrimo);
+}
+numero_primo(int *_N){
+    int divisore=2;
+    int contatore=0;
+    
+    while (divisore<=*_N/2 && contatore<2){
+        if(*_N%divisore==0)
+            contaDivisori++;
+        divisore++;
+    }
 
+    if (contatore==1){
+        _N=1;
+    }
+    else{
+        _N=0;
+    }
+    return contatore;
 }
