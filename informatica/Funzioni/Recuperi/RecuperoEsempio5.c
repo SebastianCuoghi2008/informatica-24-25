@@ -3,7 +3,11 @@
 #include <stdio.h>
 
 int main(){
-    int posti_totali = 0, posti_liberi = 0, posti_occupati=0, libero=0;
+    int posti_totali=0;
+    int posti_liberi=0;
+    int posti_occupati=0;
+    int libero=0;
+    
     do {
         printf("Quanti posti ci sono nel tuo parcheggio? ");
         scanf("%d", &posti_totali);
