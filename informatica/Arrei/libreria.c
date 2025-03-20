@@ -22,3 +22,17 @@ void stampaVett(int vett[],int dim,char sep){
         printf("%d%c", vett[i],sep);
     }
 }
+void caricaRandom(int vett[],int dim){
+    srand(time(NULL));
+    for(int i=0; i<dim; i++){
+        vett[i]=rand()%100;
+    }    
+}
+float calcolaMedia(int vett[],int dim){
+    float media=0; somma=0;
+
+    for(int i=0; i<dim; i++){
+        somma+=vett[i];
+    }
+    return somma/dim;
+}
