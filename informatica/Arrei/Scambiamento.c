@@ -10,6 +10,7 @@
 int main(){
     srand(time(NULL));
     int V1[DIM], V2[DIM], k;
+    
     riempiVettoreCasuale(V1, DIM, 1, 500);
     riempiVettoreCasuale(V2, DIM, 1, 500);
 
