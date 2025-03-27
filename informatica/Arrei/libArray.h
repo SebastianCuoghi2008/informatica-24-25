@@ -42,7 +42,7 @@ int ricercaSequenziale(int *vettore, int dim, int valore);
 
 /**
  * questa funzione restituisce la posizione del primo elemento in un array ORDINATO in ordine crescente che ha valore uguale alla variabile valore, se non trova l'elemento restituisce -1
- * @param int[]vettore in ingresso
+ * @param int[] vettore in ingresso
  * @param int dimensione del vettore
  * @param int indice dell'elemento da cui parte la ricerca
  * @param int indice dell'elemento a cui arriva la ricerca
@@ -53,5 +53,9 @@ int ricercaBinaria(int array[], int dim, int estInf, int estSup, int valore);
 
 /**
  * Funzione che riempie un vettore di dimensione dim con numeri casuali in ordine crescente
+ * @param int[] vettore
+ * @param
+ * @param
+ * @param
  */
-void riempiVettoreOrdinatoCasuale(int vett[], int dim, int 
+void riempiVettoreOrdinatoCasuale(int vett[], int dim, int minimo, int massimo);
