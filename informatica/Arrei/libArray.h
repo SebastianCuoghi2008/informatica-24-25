@@ -5,12 +5,14 @@
  * @param char separatore tra un elemento e un altro 
  */
 void stampaVettore(int vettore[], int dim, char sep);
+
 /**
  * funzione che riempie un vettore con valori scelti dall'utente.
  * @param int [] vettore di interi 
  * @param int dimensione del vettore 
  */
 void riempiVettore(int vettore[], int dim);
+
 /**
  * funzione riempie un vettore con numeri casuali compresi tra un minimo e un massimo.
  * @param int [] vettore di interi 
@@ -19,6 +21,7 @@ void riempiVettore(int vettore[], int dim);
  * @param int massimo valore dei numeri casuali
  */
 void riempiVettoreCasuale(int vettore[], int dim, int minimo, int massimo);
+
 /**
  * questa funzione restituisce il numero di volte in cui compare la variabile valore all'interno del vettore
  * @param int[]vettore in ingresso
@@ -36,7 +39,6 @@ int contaOccorrenze(int vettore[], int dim, int valore);
  * @return int posizione del primo elemento uguale a valore o -1 se non trovato
  */
 int ricercaSequenziale(int *vettore, int dim, int valore);
-
 
 /**
  * questa funzione restituisce la posizione del primo elemento in un array ORDINATO in ordine crescente che ha valore uguale alla variabile valore, se non trova l'elemento restituisce -1
