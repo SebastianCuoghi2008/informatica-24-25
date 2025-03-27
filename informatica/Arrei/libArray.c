@@ -13,7 +13,6 @@ void riempiVettore(int vettore[], int dim){
     }
 }
 void riempiVettoreCasuale(int vettore[], int dim, int minimo, int massimo){
-    
     for(int i=0; i<dim; i++){
         vettore[i]=rand()%(massimo-minimo+1)+minimo;
     }
