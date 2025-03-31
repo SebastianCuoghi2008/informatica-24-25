@@ -36,3 +36,9 @@ float calcolaMedia(int vett[],int dim){
     }
     return somma/dim;
 }
+void caricaVett(int vett[],int dim){
+    for(int i=0; i<dim; i++){
+        printf("inserisci un valore: ");
+        scanf("%d ")
+    }
+}
