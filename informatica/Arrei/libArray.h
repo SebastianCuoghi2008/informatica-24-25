@@ -59,3 +59,29 @@ int ricercaBinaria(int array[], int dim, int estInf, int estSup, int valore);
  * @param
  */
 void riempiVettoreOrdinatoCasuale(int vett[], int dim, int minimo, int massimo);
+
+/**
+ * funzione che ordina un vettore
+ * @param int[]vettore in ingresso
+ * @param int dimensione del vettore
+ */
+
+ void bubbleSort(int vett[], int dim);
+
+ /**
+  * funzione che ordina un vettore
+  * @param int[]vettore in ingresso
+  * @param int dimensione del vettore
+  */
+ 
+  void selectionSort(int vett[], int dim);
+ 
+ /**
+  * funzione ricorsiva che ordina un vettore 
+  * @param int[]vettore in ingresso
+  * @param int dimensione totale del vettore (serve per stampare il vettore ad ogni ricorsione)
+  * @param int indice dell'elemento iniziale del vettore da ordinare
+  * @param int indice dell'elemento finale del vettore da ordinare
+  */
+ 
+  void quickSort(int v[], int dim, int inizio, int fine);
