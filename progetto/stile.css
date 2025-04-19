@@ -1,0 +1,47 @@
+body {
+    background: #00256b;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contenitore {
+    width: 1000px;
+    margin: 20px auto;
+    background: #00256b;
+    padding: 20px;
+}
+
+#header {
+    height: 100px;
+    background: #7801ff;
+}
+
+#nav {
+    height: 50px;
+    background: #7801ff;
+}
+
+#immagine {
+    height: 200px;
+    background: #7801ff;
+}
+
+#description {
+    height: 150px;
+    background: #7801ff;
+}
+
+#link {
+    height: 50px;
+    background: #7801ff;
+}
+
+#footer {
+    height: 80px;
+    background: #7801ff;
+}
+.titolo{
+    color: red;
+    font-family:monospace;
+    text-align: center;
+}
