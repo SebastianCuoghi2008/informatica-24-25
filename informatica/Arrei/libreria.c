@@ -17,17 +17,20 @@ void richiediValori(int vett[],int dim){
     }
     
 }
+
 void stampaVett(int vett[],int dim,char sep){
     for(int i=0; i<dim; i++){
         printf("%d%c", vett[i],sep);
     }
 }
+
 void caricaRandom(int vett[],int dim){
     srand(time(NULL));
     for(int i=0; i<dim; i++){
         vett[i]=rand()%100;
     }    
 }
+
 float calcolaMedia(int vett[],int dim){
     float media=0; somma=0;
 
@@ -36,9 +39,28 @@ float calcolaMedia(int vett[],int dim){
     }
     return somma/dim;
 }
+
 void caricaVett(int vett[],int dim){
     for(int i=0; i<dim; i++){
         printf("inserisci un valore: ");
         scanf("%d ")
+    }
+}
+
+void bubbleSort(int vett[], int dim){
+    int temp;
+    int flag=0;
+    int i=0;
+    while(flag==0){
+        flag=1;
+        for(int j=0; j<dim-1-i; j++){
+            if(vett[j]>vett[j+1]){
+                flag=0;
+                temp=vett[j];
+                vett[j]=vett[j+1];
+                vett[j+1]=temp;
+            }
+        }
+        i++;
     }
 }
