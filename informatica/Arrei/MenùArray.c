@@ -17,7 +17,8 @@ int main(){
         printf("\n1) carica l'array");
         printf("\n2) stampa l'array");
         printf("\n3) ordina tramite il bubble sort");
-        printf("\ndigita 0 per terminare");
+        printf("\n4) trovato il valore minimo e il valore mssimo all'interno dell'array scambiare la posizione");
+        printf("\ndigita 0 per terminare: ");
         scanf("%d", &scelta);
 
         switch (scelta){
@@ -25,10 +26,14 @@ int main(){
                 caricaVett(vett, DIM);
                 break;
             case 2:
-                stampaVett(vett, DIM, "-");
+                stampaVett(vett, DIM, '-');
                 break;
             case 3:
                 bubbleSort(vett, DIM);
+                break;
+            case 4:
+                scambioMinMax(vett, DIM);
+                stampaVett(vett, DIM, '-');
                 break;
             default:
             break;

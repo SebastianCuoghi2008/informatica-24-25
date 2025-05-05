@@ -2,6 +2,8 @@
     Sviluppiamo la funzioni
 */
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "libreria.h" //prototipi delle funzioni
 
 void richiediValori(int vett[],int dim){
@@ -32,7 +34,7 @@ void caricaRandom(int vett[],int dim){
 }
 
 float calcolaMedia(int vett[],int dim){
-    float media=0; somma=0;
+    float media=0, somma=0;
 
     for(int i=0; i<dim; i++){
         somma+=vett[i];
@@ -43,7 +45,7 @@ float calcolaMedia(int vett[],int dim){
 void caricaVett(int vett[],int dim){
     for(int i=0; i<dim; i++){
         printf("inserisci un valore: ");
-        scanf("%d ")
+        scanf("%d ", &vett[i]);
     }
 }
 
@@ -63,4 +65,26 @@ void bubbleSort(int vett[], int dim){
         }
         i++;
     }
+}
+void scambioMinMax(int vett[], int dim){
+    int min, max, tmp, i_min, i_max;
+
+    min=vett[0];
+    max=vett[0];
+    for (int i=1; i<dim; i++){
+        //calcolo il valore minimo e la sua posizione all'interno dell'array
+        if(vett[i]<min){
+            min=vett[i]; 
+            i_min=i;   
+        }
+        //calcolo il valore massimo e la sua posizione all'interno dell'array   
+        if(vett[i]>max){
+            max=vett[i];
+            i_max=i;
+        }
+    }
+    //scambio
+    vett[i_min]=max;
+    vett[i_max]=min;
+
 }
