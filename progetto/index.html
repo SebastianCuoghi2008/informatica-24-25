@@ -50,6 +50,7 @@
                 <li>1x resistenza da 10K ohm</li>
                 <li>2x led</li>
                 <li>23 cavi</li>
+                <li>Diodo</li>
             </ul>
         </div>
         <div id="codice">
@@ -125,7 +126,11 @@ void verificaPassword() {
     lcd.write(115); // s
 
     // decide la modalità in base alla password
-    modalita = (passwordInserita == password1) ? 1 : 2;
+    if(passwordInserita==password1){
+      modalita=1;
+    }else{
+      modalita=2;
+    }
   } else {
     lcd.print("password errata");
     // se la password è sbagliata mostra il messaggio
