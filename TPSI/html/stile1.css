@@ -1,0 +1,19 @@
+body{
+    color: white;
+    height: 600px;
+    width: 900px;
+}
+
+#titolo{
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, serif;
+    color: black;
+}
+
+#colonna{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, serif;
+}
+
