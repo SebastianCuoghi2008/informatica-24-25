@@ -1,65 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Progetto Arduino</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link href="stile.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <h1 class="titolo">Progetto Arduino: di Leonardo Bernini e Sebastian Cuoghi</h1>
-    <div id="contenitore">
-        <div id="header">
-            <h2>Password ambientale dinamica</h2>
-        </div>
-        <div id="nav">
-            <a href="#descrizione">Descrizione</a> |
-            <a href="#componenti">Componenti</a> |
-            <a href="#codice">Codice</a> |
-            <a href="#tinkercard">Tinkercard</a>
-        </div>
-        <div id="immagine">
-            <img src="NostroArduino.jpg" alt="Schema circuito Arduino LM35">
-        </div>
-        <div id="description">
-            <h3 style="color: magenta" id="descrizione">Descrizione del progetto</h3>
-            <p>
-                nel nostro progetto di Arduino, all'avvio, il sistema richiede una password tramite il tastierino.
-                inserendo il codice "4222" attiva la gestione di temperatura:
-                e fa vedere che se supera una soglia, la ventola presente si attiva e inizia a girare; il valore viene mostrato dopo sullo schermo LCD.
-                inseremdo il codice "6555" attiva la gestione della luminosità:
-                e fa vedere che la luminosità rilevata sia inferiore a una soglia prestabilita, e quindi un LED (e un'altra uscita) si attivano;
-                il livello è visualizzato sullo schermo LCD.
-                infine dopo ogni funzione, si torna alla schermata principale.
-            </p>
-        </div>
-        <div id="componenti">
-            <h3 style="color: magenta" id="componenti">Componenti utilizzati</h3>
-            <ul>
-                <li>Arduino uno R3</li>
-                <li>Breadboard</li>
-                <li>Tastierino 4x4</li>
-                <li>LCD 16x2</li>
-                <li>Fotoresistore</li>
-                <li>Potenziometro</li>
-                <li>NPN Transistor (BJT)</li>
-                <li>Termoresistore</li>
-                <li>Mottore CC (con ventola)</li>
-                <li>3x resistenze da 220 ohm</li>
-                <li>2x resistenza da 1K ohm</li>
-                <li>1x resistenza da 10K ohm</li>
-                <li>2x led</li>
-                <li>23 cavi</li>
-                <li>Diodo</li>
-            </ul>
-        </div>
-        <div id="codice">
-          <h3 style="color: magenta" id="codice">Codice Arduino</h3>
-          <pre>
-#include <.LiquidCrystal.h> // serve per controllare il display LCD
-#include <.Keypad.h>        // serve per usare il tastierino
-#include <.math.h>          // serve per funzioni matematiche (tipo log)
-
+#include <LiquidCrystal.h> // serve per controllare il display LCD
+#include <Keypad.h>        // serve per usare il tastierino
+#include <math.h>          // serve per funzioni matematiche (tipo log)
 // variabili usate per leggere i sensori
 int valoreADC;
 float temperaturaC;
@@ -94,7 +35,6 @@ char tasti[RIGHE][COLONNE] = {
 byte pinRighe[RIGHE] = {13, 10, 9};
 byte pinColonne[COLONNE] = {8, 7, 6};
 Keypad tastierino = Keypad(makeKeymap(tasti), pinRighe, pinColonne, RIGHE, COLONNE);
-
 // funzione che legge 4 tasti dal tastierino come password
 void leggiPassword() {
   passwordInserita = "";     // azzera la password
@@ -111,7 +51,6 @@ void leggiPassword() {
     }
   }
 }
-
 // controlla se la password è giusta
 void verificaPassword() {
   lcd.clear();
@@ -133,11 +72,11 @@ void verificaPassword() {
     }
   } else {
     lcd.print("password errata");
-    // se la password è sbagliata mostra il messaggio   
+    // se la password è sbagliata mostra il messaggio
+    
   }
   delay(2000); // aspetta 2 secondi
 }
-
 // legge la temperatura dal termistore e attiva un motore se troppo alta
 void gestisciTemperatura() {
   valoreADC = analogRead(A0);
@@ -185,7 +124,6 @@ void gestisciTemperatura() {
     delay(1000);
   }
 }
-
 // legge la luce e accende delle uscite in base alla soglia
 void gestisciLuminosita() {
   valoreLuce = analogRead(A1);
@@ -219,7 +157,7 @@ void gestisciLuminosita() {
     }
   } else {
     lcd.setCursor(0, 1);
-    lcd.print("Luce sufficiente");
+    //lcd.print("Luce sufficiente");
     lcd.write(76);  // L
     lcd.write(117); // u
     lcd.write(99);  // c
@@ -239,9 +177,10 @@ void gestisciLuminosita() {
   }
 }
 
+
 void resettaLCD() {
   lcd.clear();
-  lcd.print("Enter password");
+  //lcd.print("Enter password");
   // Scrivo "Enter password" carattere per carattere
   lcd.write(69);
   lcd.write(110);
@@ -269,7 +208,6 @@ void setup() {
   lcd.begin(16, 2); // imposta il display
   resettaLCD();     // mostra "Enter password"
 }
-
 // ciclo continuo del programma
 void loop() {
   leggiPassword();     // chiede la password
@@ -285,18 +223,4 @@ void loop() {
 
   resettaLCD(); // dopo torna al menu iniziale
 }
-          </pre>
-        </div>
-        <div id="link">
-            <h3 style="color: magenta" id="tinkercard">Link al progetto</h3>
-            <p>il nostro progetto lo si può trovare su Tinkercard:</p>
-            <a href="https://www.tinkercad.com/things/h0NG4HTRcHi-progetto-leo-seba?sharecode=1JsWDixQ1WKMz9OYsv-lzTSUqhWvLDzFaR2rBub5Z2s" target="_blank">➡️ link di Tinkercard</a>
-            <p><br>qui pui vedere il codice del progetto:</p>
-            <a href="codice.ino" target="_blank">➡️ codice Arduino</a>   
-        </div>
-        <div id="footer">
-            <p>Creato da Seba e Leo | Ultimo aggiornamento: Aprile 2025</p>
-        </div>
-    </div>
-</body>
-</html>
+
